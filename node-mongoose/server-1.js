@@ -14,7 +14,7 @@ db.once('open',function() {
   //console.log("Connected correctly to server");
 
   var newDish = Dishes({
-    name: "Uthapizza",
+    name: "Uthapizza_teswwt",
     description:'Test'
   });
   newDish.save(function(err){
@@ -24,7 +24,7 @@ db.once('open',function() {
     //Find dishes
     Dishes.find({},function(err,dishes){
       if(err) throw err;
-      console.log(dishes);
+      console.log(JSON.stringify(dishes));
         db.collection('dishes').drop(function(){
           db.close();
         });
